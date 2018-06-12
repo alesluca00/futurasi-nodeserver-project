@@ -1,0 +1,18 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            
+            var getUsers = function() {
+                var xmlHttp = new XMLHttpRequest();
+                xmlHttp.open( "GET", "http://localhost:8000/notes", false ); // false for synchronous request
+                xmlHttp.send( null );
+                console.log("response" + xmlHttp.responseText);
+            } 
+        
+
+        </script>
+    </body>
+</html>
