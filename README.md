@@ -7,7 +7,7 @@ npm install --save
 
 npm install -g nodemon
 
-# Avvio Server
+# Avvio Servern
 
 nodemon index.js
 

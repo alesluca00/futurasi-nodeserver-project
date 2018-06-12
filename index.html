@@ -7,10 +7,12 @@
             
             var getUsers = function() {
                 var xmlHttp = new XMLHttpRequest();
-                xmlHttp.open( "GET", "http://localhost:8000/notes", false ); // false for synchronous request
+                xmlHttp.open( "GET", "http://localhost:9000/persone", false ); // false for synchronous request
                 xmlHttp.send( null );
                 console.log("response" + xmlHttp.responseText);
             } 
+
+            getUsers();
         
 
         </script>

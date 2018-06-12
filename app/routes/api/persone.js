@@ -10,7 +10,6 @@ module.exports = (app, db) => {
     res.setHeader('Access-Control-Allow-Credentials', true);
     /***************** TRUST-ME PART */
 
-    console.log("ehi");
 
     db.persone_db.findAll().then((risultato) => {
       res.send(risultato);
@@ -44,7 +43,7 @@ module.exports = (app, db) => {
   });
 
 
-  app.post('/remove_persona', (req, res) => {
+  app.post('/rimuovi_persona', (req, res) => {
 
     /***************** TRUST-ME PART */
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -54,9 +53,7 @@ module.exports = (app, db) => {
     /***************** TRUST-ME PART */
 
 
-    db.persone_db.inserisci({
-      id: req.query.id,
-    })
+    db.persone_db.deleteById(req.query.fiscale)
     .then((risultato) => {
       res.send(risultato);
     });

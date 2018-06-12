@@ -18,8 +18,8 @@ module.exports = class PersoneDB {
         });
     }
 
-    deleteById(id) {
-        user.remove({id: id}).then((u) => {
+    deleteById(fiscale) {
+        return this.utentiDB.remove({fiscale: fiscale}).then((u) => {
             return u;
         });
     }

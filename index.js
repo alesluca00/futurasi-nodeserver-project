@@ -11,6 +11,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 var db = require('./app/db');
 require('./app/routes')(app, db);
 
-app.listen(8000, () => {
-  console.log('We are live on ' + 8000);
+app.listen(9000, () => {
+  console.log('We are live on ' + 9000);
 });
