@@ -7,6 +7,7 @@ module.exports = class PersoneDB {
     }
 
     inserisci(utente) {
+        console.log('utente::', utente)
         return this.utentiDB.insert(utente).then((u) => {
             return u;
         });
@@ -18,8 +19,8 @@ module.exports = class PersoneDB {
         });
     }
 
-    deleteById(fiscale) {
-        return this.utentiDB.remove({fiscale: fiscale}).then((u) => {
+    deleteById(_id) {
+        return this.utentiDB.remove({_id: _id}).then((u) => {
             return u;
         });
     }

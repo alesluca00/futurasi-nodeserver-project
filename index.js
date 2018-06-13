@@ -12,6 +12,6 @@ var db = require('./app/db/index.js');
 
 require('./app/routes/index.js')(app, db);
 
-app.listen(4000, () => {
-  console.log('We are live on ' + 4000);
+app.listen(9000, () => {
+  console.log('We are live on ' + 9000);
 });

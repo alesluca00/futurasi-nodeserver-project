@@ -30,10 +30,12 @@ module.exports = (app, db) => {
 
 
     db.persone_db.inserisci({
+
       nome: req.query.nome,
       cognome: req.query.cognome,
       fiscale: req.query.fiscale,
       img: req.query.img,
+
     })
     .then((risultato) => {
       res.send(risultato);
@@ -53,7 +55,11 @@ module.exports = (app, db) => {
     /***************** TRUST-ME PART */
 
 
-    db.persone_db.deleteById(req.query.fiscale)
+    db.persone_db.deleteById(
+      
+      req.query._id
+
+    )
     .then((risultato) => {
       res.send(risultato);
     });
