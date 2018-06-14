@@ -19,6 +19,26 @@ module.exports = class PersoneDB {
         });
     }
 
+    modifica(utente) {
+        return this.deleteByFiscale(utente.fiscale).then(() => {
+            return this.inserisci(utente);
+        });
+        
+    }
+
+    getPersona(fiscale) {
+        return this.utentiDB.findOne({fiscale : fiscale}).then((u) => {
+            return u
+        });
+        
+    }
+
+    deleteByFiscale(fiscale) {
+        return this.utentiDB.remove({fiscale: fiscale}).then((u) => {
+            return u;
+        });
+    }
+
     deleteById(_id) {
         return this.utentiDB.remove({_id: _id}).then((u) => {
             return u;

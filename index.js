@@ -12,6 +12,6 @@ var db = require('./app/db/index.js');
 
 require('./app/routes/index.js')(app, db);
 
-app.listen(9000, () => {
-  console.log('We are live on ' + 9000);
+app.listen(process.env.PORT || 9000, () => {
+  console.log('We are live on ' + process.env.PORT || 9000);
 });

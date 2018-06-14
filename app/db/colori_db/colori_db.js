@@ -7,7 +7,7 @@ module.exports = class ColoriDB {
     }
 
     inserisci(colori) {
-        return this.coloriDB.insert(colore).then((u) => {
+        return this.coloriDB.insert(colori).then((u) => {
             return u;
         });
     }
