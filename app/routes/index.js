@@ -5,7 +5,7 @@ var APIColori = require('./api/colori');
 
 module.exports = function(app, db) {
 
-  app.get('/getPersona', (req, res) => {
+  app.get('/', (req, res) => {
 
     /***************** TRUST-ME PART */
     res.setHeader('Access-Control-Allow-Origin', '*');
